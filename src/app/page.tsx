@@ -47,7 +47,7 @@ function SectionItem({ section, containerRef, index, total }: { section: typeof 
   return (
     <section 
       ref={sectionRef}
-      className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-16 lg:px-32 snap-center relative z-10"
+      className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-16 lg:px-32 snap-center relative z-20"
     >
       <motion.div 
         style={{ opacity, y, scale }}
