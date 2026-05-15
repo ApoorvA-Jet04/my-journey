@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Agentic Future",
+  title: "Apoorva N. Mudabagil | Timeline Journey",
   description: "A showcase of the journey to building the intelligent systems of tomorrow.",
 };
 
@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white font-[family-name:var(--font-geist-sans)]`}
       >
+        <div className="bg-noise" />
         {children}
       </body>
     </html>
