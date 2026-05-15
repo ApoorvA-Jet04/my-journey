@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-black text-white;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  @keyframes spin-centered {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .animate-spin-centered {
+    animation: spin-centered 40s linear infinite;
+  }
+}
