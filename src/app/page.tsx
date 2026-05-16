@@ -1,7 +1,8 @@
+/* eslint-disable */
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+import { motion, useSpring, useMotionValue } from "framer-motion";
 
 const sections = [
   {
@@ -43,7 +44,7 @@ const ScrambleText = ({ text }: { text: string }) => {
   const scramble = () => {
     let iteration = 0;
     const interval = setInterval(() => {
-      setDisplayText((prev) => 
+      setDisplayText(
         text.split("")
           .map((char, index) => {
             if(char === " ") return " ";
@@ -96,7 +97,7 @@ const StaggerText = ({ text }: { text: string }) => {
   );
 };
 
-function SectionItem({ section, containerRef, index, total, setHovered, setIsLastSection }: { section: typeof sections[0], containerRef: React.RefObject<HTMLElement>, index: number, total: number, setHovered: (val: boolean) => void, setIsLastSection: (val: boolean) => void }) {
+function SectionItem({ section, index, total, setHovered, setIsLastSection }: { section: typeof sections[0], index: number, total: number, setHovered: (val: boolean) => void, setIsLastSection: (val: boolean) => void }) {
   const sectionRef = useRef<HTMLElement>(null);
 
   const renderSticker = () => {
@@ -173,7 +174,6 @@ function SectionItem({ section, containerRef, index, total, setHovered, setIsLas
 }
 
 export default function Home() {
-  const containerRef = useRef<HTMLElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isLastSection, setIsLastSection] = useState(false);
 
@@ -195,7 +195,7 @@ export default function Home() {
   
   return (
     <>
-    <main ref={containerRef} className="bg-transparent text-white h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth relative z-10">
+    <main className="bg-transparent text-white h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth relative z-10">
       
       {/* Sleek Fixed Top Navigation */}
       <header className="fixed top-0 left-0 w-full px-8 py-6 z-50 flex items-center justify-between pointer-events-none">
@@ -284,7 +284,6 @@ export default function Home() {
         <SectionItem 
           key={section.id} 
           section={section} 
-          containerRef={containerRef} 
           index={index} 
           total={sections.length} 
           setHovered={setIsHovered}
