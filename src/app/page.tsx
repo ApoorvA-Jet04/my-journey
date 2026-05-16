@@ -8,7 +8,7 @@ const sections = [
   {
     id: "section-0",
     title: "HELLO.",
-    content: "I'm Apoorva, a 2nd-semester Computer Science student at BMSIT&M. I don't just prompt AI; I’m a student of architecture, reverse-engineering how the underlying systems work."
+    content: "I'm Apoorva N. Mudabagil, a 2nd-semester Computer Science student at BMSIT&M. I don't just prompt AI; I’m a student of architecture, reverse-engineering how the underlying systems work."
   },
   {
     id: "section-1",
