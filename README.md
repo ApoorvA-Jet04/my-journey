@@ -1,6 +1,8 @@
 # 🚀 Apoorva's Developer Journey
 A cinematic, scroll-driven timeline built for the E-Cell BMSITM Tech Team Recruitment (2026-27).
 
+**🌐 Live Demo:** [View on Vercel](https://my-journey-git-main-apoorva-jet04s-projects.vercel.app/)
+
 ## 🌟 The Concept
 This isn't just a portfolio; it’s an honest story. It tracks my transition from a pre-medical aspirant (NEET) to a 2nd-semester Information Science student at BMSIT&M.
 
