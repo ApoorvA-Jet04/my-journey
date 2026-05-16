@@ -1,13 +1,13 @@
 /* eslint-disable */
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 
 const sections = [
   {
     id: "section-0",
-    title: "HELLO.",
+    title: "Hii!",
     content: "I'm Apoorva N. Mudabagil, a 2nd-semester Computer Science student at BMSIT&M. I don't just prompt AI; I’m a student of architecture, reverse-engineering how the underlying systems work."
   },
   {
@@ -98,7 +98,6 @@ const StaggerText = ({ text }: { text: string }) => {
 };
 
 function SectionItem({ section, index, total, setHovered, setIsLastSection }: { section: typeof sections[0], index: number, total: number, setHovered: (val: boolean) => void, setIsLastSection: (val: boolean) => void }) {
-  const sectionRef = useRef<HTMLElement>(null);
 
   const renderSticker = () => {
     if (section.id === "section-1") {
@@ -135,7 +134,6 @@ function SectionItem({ section, index, total, setHovered, setIsLastSection }: { 
 
   return (
     <motion.section 
-      ref={sectionRef}
       className="h-screen w-full flex flex-col items-center justify-center px-6 md:px-16 lg:px-32 snap-center relative z-20"
       onViewportEnter={() => { if (section.id === "section-5") setIsLastSection(true); }}
       onViewportLeave={() => { if (section.id === "section-5") setIsLastSection(false); }}
